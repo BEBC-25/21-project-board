@@ -27,7 +27,6 @@ mkdir -p uploads logs
 
 # 8. MySQL DB 컨테이너 백그라운드 구동, 볼륨 마운트 및 환경 변수 설정
 docker run -d --name board-db \
-  --network board-net \
   -p 3306:3306 \
   -v board-db-data:/var/lib/mysql \
   -e MYSQL_DATABASE=board_db \
